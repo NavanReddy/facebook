@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Facebook Login Page</title>
+</head>
+<body>
+<h3> user details</h3>
+<form th:action="@{/User/save}" method="post"th:object="${user}">
+		<pre>
+UserID	:<input type="text" th:field="*{id}" />
+Fname	:<input type="text" th:field="*{Fname}" />
+Mname	:<input type="text" th:field="*{Mname}" />
+Lname	:<input type="text" th:field="*{Lname}" />
+Email	:<input type="text" th:field="*{Email}" />
+Mobile	:<input type="text" th:field="*{Mobile}" />
+
+<input type="submit" value="Create User">
+
+</pre>
+
+</form>
+<span th:text="${message}"></span> 
+</body>
+</html>
